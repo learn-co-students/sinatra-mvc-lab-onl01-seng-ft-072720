@@ -12,9 +12,7 @@ class PigLatinizer
         vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
         return_value = ""
 
-        if word.length <=3
-            return_value = word+"way"
-        elsif vowels.include?(word[0])
+        if vowels.include?(word[0])
             return_value = word+"way"
         elsif !vowels.include?(word[0]) && !vowels.include?(word[1]) && !vowels.include?(word[2])
             return_value = word[3..-1]+word[0..2]+"ay"
